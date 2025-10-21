@@ -1,0 +1,285 @@
+/* Основные стили приложения */
+.monopoly-layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.monopoly-header {
+  background: linear-gradient(90deg, #1890ff, #722ed1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0 24px;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content .game-title {
+  color: white;
+  font-size: 28px;
+  margin-top: 12px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.monopoly-content {
+  padding: 24px;
+  background: transparent;
+}
+
+.game-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Стили карточек */
+.control-card,
+.stats-card,
+.players-table-card,
+.transfer-card,
+.history-card,
+.game-control-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.control-card .ant-card-head,
+.stats-card .ant-card-head,
+.players-table-card .ant-card-head,
+.transfer-card .ant-card-head,
+.history-card .ant-card-head,
+.game-control-card .ant-card-head {
+  background: linear-gradient(90deg, #f0f2ff, #f6ffed);
+  border-bottom: 1px solid #e8f4fd;
+  border-radius: 12px 12px 0 0;
+}
+
+.control-card .ant-card-head-title,
+.stats-card .ant-card-head-title,
+.players-table-card .ant-card-head-title,
+.transfer-card .ant-card-head-title,
+.history-card .ant-card-head-title,
+.game-control-card .ant-card-head-title {
+  color: #1890ff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.ant-row {
+  margin-bottom: 16px;
+}
+
+/* Секция транзакций */
+.transfer-card {
+  margin-top: 16px;
+}
+
+/* Секция добавления игрока */
+.add-player-section {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.add-player-section .ant-input {
+  border-radius: 6px 0 0 6px;
+}
+
+.add-player-section .ant-btn {
+  border-radius: 0 6px 6px 0;
+  height: 32px;
+}
+
+/* Стили таблицы */
+.ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background: linear-gradient(90deg, #f0f2ff, #f6ffed);
+  color: #1890ff;
+  font-weight: 600;
+  border-bottom: 2px solid #e8f4fd;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f0f9ff !important;
+}
+
+/* Стили статистики */
+.ant-statistic-title {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.ant-statistic-content {
+  color: #1890ff;
+  font-weight: 600;
+}
+
+/* Стили Timeline */
+.ant-timeline-item-content {
+  margin-left: 8px;
+}
+
+.ant-timeline-item-tail {
+  border-left-color: #d9d9d9;
+}
+
+/* Стили тегов */
+.ant-tag {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 2px 8px;
+}
+
+/* Стили кнопок */
+.ant-btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.ant-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+.ant-btn-primary {
+  background: linear-gradient(90deg, #1890ff, #722ed1);
+  border: none;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(90deg, #40a9ff, #9254de);
+}
+
+.ant-btn-dashed {
+  border-color: #1890ff;
+  color: #1890ff;
+}
+
+.ant-btn-dashed:hover {
+  border-color: #40a9ff;
+  color: #40a9ff;
+  background: rgba(24, 144, 255, 0.05);
+}
+
+/* Стили форм */
+.ant-input,
+.ant-select-selector,
+.ant-input-number {
+  border-radius: 6px;
+  border-color: #d9d9d9;
+  transition: all 0.3s ease;
+}
+
+.ant-input:focus,
+.ant-select-focused .ant-select-selector,
+.ant-input-number:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Хелперы */
+.width-100 {
+  width: 100%
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .monopoly-content {
+    padding: 16px;
+  }
+  
+  .game-title {
+    font-size: 24px !important;
+  }
+  
+  .transfer-card .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  .transfer-card .ant-btn {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .monopoly-header {
+    padding: 0 16px;
+  }
+  
+  .monopoly-content {
+    padding: 12px;
+  }
+  
+  .game-title {
+    font-size: 20px !important;
+  }
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.control-card,
+.stats-card,
+.players-table-card,
+.transfer-card,
+.history-card,
+.game-control-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Дополнительные эффекты */
+.ant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.ant-statistic:hover .ant-statistic-content {
+  color: #722ed1;
+  transition: color 0.3s ease;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 480px) {
+  .ant-table {
+    font-size: 12px;
+  }
+  
+  .ant-card-head-title {
+    font-size: 14px;
+  }
+  
+  .ant-btn {
+    height: 36px;
+    font-size: 14px;
+  }
+}
