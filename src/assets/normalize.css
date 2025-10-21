@@ -1,0 +1,83 @@
+/* Custom | https://github.com/aleksanderlamkov/future-tech/blob/main/styles/_normalize.scss
+  ========================================================================== */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scrollbar-gutter: stable;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+
+  line-height: 1.5;
+}
+
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+a:where([class]) {
+  display: inline-flex;
+
+  text-decoration: none;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+/*
+[fill] {
+  fill: currentColor;
+}
+[stroke] {
+  stroke: currentColor;
+}
+*/
+
+svg * {
+  transition-property: fill, stroke;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
